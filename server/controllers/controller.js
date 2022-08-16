@@ -9,6 +9,8 @@ module.exports = {
     },
     getJS: (req, res) => {
         res.sendFile(path.join(__dirname, "../../client/main.js"))
+    },
+    getPage2: (req, res) => {
+        res.sendFile(path.join(__dirname, "../../client/secondpage.html"))
     }
-
 }
