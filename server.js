@@ -2,13 +2,15 @@ const express = require("express")
 const cors = require("cors")
 const app = express()
 
-const { getAdHome } = require("./server/controllers/controller.js")
+const { getAdHome, getCSS, getJS } = require("./server/controllers/controller.js")
 
 app.use(cors())
 app.use(express.json())
 app.use(express.static('client'))
 
 app.get("/", getAdHome)
+app.get("/CSS", getCSS)
+app.get("/JS", getJS)
 
 const port = process.env.PORT || 4000
 
