@@ -2,6 +2,7 @@ const express = require("express")
 const cors = require("cors")
 const app = express()
 
+
 const { getAdHome, getCSS, getJS, getPage2 } = require("./server/controllers/controller.js")
 
 app.use(cors())
